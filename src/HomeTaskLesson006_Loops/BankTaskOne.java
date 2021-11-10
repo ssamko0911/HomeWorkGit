@@ -38,47 +38,46 @@ import java.util.Scanner;
 
 public class BankTaskOne {
 
-        public static int term;
-        public static double creditAmmount;
-        public static Scanner in = new Scanner(System.in);
-        public static final double WAGE = 1000;
-        public static final double MONEYENDOFMONTH = 500;
+    public static int term;
+    public static double creditAmmount;
+    public static Scanner in = new Scanner(System.in);
+    public static final double WAGE = 1000;
+    public static final double MONEYENDOFMONTH = 500;
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
-            System.out.println("Программа является банковским скоррингом - определяет возможность выдачи кредита.");
-            System.out.println("Зарплата клиента составляет " + WAGE + " грн. Остаток средств на конец месяца - "
-                    + MONEYENDOFMONTH + " грн.\n");
-            int customerTerm = getTerm();
-            double customerAmmount = getCreditAmmount();
-            estimateCreditOption(customerTerm, customerAmmount);
-
-        }
-
-        public static int getTerm() {
-            System.out.println("Введите желаемый срок кредитования в месяцах (от 1 до 12): ");
-            term = in.nextInt();
-            return term;
-        }
-
-        public static double getCreditAmmount() {
-            System.out.println("Введите сумму кредита: ");
-            creditAmmount = in.nextDouble();
-            return creditAmmount;
-        }
-
-        public static void estimateCreditOption(int term, double amount) {
-            if (MONEYENDOFMONTH * term > amount) {
-                System.out.println("Поздравляем, вам может быть выдан кредит в сумме " + amount + " грн. сроком на "
-                        + term + " месяц(ев).");
-            } else {
-                System.out.println("Вы можете взять кредит, но если увеличите количество месяцев до "
-                        + (term + 1) + "-x"
-                        + ".\nИли вы можете уменьшить сумму кредита до " + (MONEYENDOFMONTH * term) + " грн. и за"
-                        + " выбранный Вами срок сможете его погасить.\n");
-            }
-
-        }
+        System.out.println("Программа является банковским скоррингом - определяет возможность выдачи кредита.");
+        System.out.println("Зарплата клиента составляет " + WAGE + " грн. Остаток средств на конец месяца - "
+                + MONEYENDOFMONTH + " грн.\n");
+        int customerTerm = getTerm();
+        double customerAmmount = getCreditAmmount();
+        estimateCreditOption(customerTerm, customerAmmount);
     }
+
+    public static int getTerm() {
+        System.out.println("Введите желаемый срок кредитования в месяцах (от 1 до 12): ");
+        term = in.nextInt();
+        return term;
+    }
+
+    public static double getCreditAmmount() {
+        System.out.println("Введите сумму кредита: ");
+        creditAmmount = in.nextDouble();
+        return creditAmmount;
+    }
+
+    public static void estimateCreditOption(int term, double amount) {
+        if (MONEYENDOFMONTH * term > amount) {
+            System.out.println("Поздравляем, вам может быть выдан кредит в сумме " + amount + " грн. сроком на "
+                    + term + " месяц(ев).");
+        } else {
+            System.out.println("Вы можете взять кредит, но если увеличите количество месяцев до "
+                    + (term + 1) + "-x"
+                    + ".\nИли вы можете уменьшить сумму кредита до " + (MONEYENDOFMONTH * term) + " грн. и за"
+                    + " выбранный Вами срок сможете его погасить.\n");
+        }
+
+    }
+}
 
 
