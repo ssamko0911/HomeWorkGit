@@ -18,8 +18,12 @@ public class CustomerArrayOneLoop {
         int max = array[0];
         int min = array[0];
         int sum = 0;
-
+        System.out.println("Вывод нечётных: ");
         for (int i = 0; i < array.length; i++) {
+            if (array[i]%2!=0){
+                System.out.print(array[i] + "\t");
+            }
+
             if (array[i]<min){
                 min = array[i];
             }
@@ -28,10 +32,10 @@ public class CustomerArrayOneLoop {
             }
             sum+=array[i];
 
-            //if (array)
+
         }
         double average = sum/ array.length;
-
+        System.out.println();
         System.out.println("Максимум: " + max);
         System.out.println("Минимум: " + max);
         System.out.println("Сумма: " + sum);
