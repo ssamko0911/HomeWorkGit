@@ -12,27 +12,30 @@ package HomeTaskLesson009_Arrays;
 public class CustomerArrayOneLoop {
 
     public static void main(String[] args) {
-
         int[] array = {11, 22, 33, 44, 55, 66, 77, 88, 99, 100};
+        System.out.println("Программа проводит манипуляции с массивом {11, 22, 33, 44, 55, 66, 77, 88, 99, 100} " +
+                "согласно задачи в одном цикле.");
+        resolveTasks(array);
+    }
 
-        int max = array[0];
-        int min = array[0];
+    public static void resolveTasks(int[] someArray) {
+        int max = someArray[0];
+        int min = someArray[0];
         int sum = 0;
         System.out.println("Вывод нечётных: ");
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 != 0) {
-                System.out.print(array[i] + "\t");
+        for (int i = 0; i < someArray.length; i++) {
+            if (someArray[i] % 2 != 0) {
+                System.out.print(someArray[i] + "\t");
             }
-
-            if (array[i] < min) {
-                min = array[i];
+            if (someArray[i] < min) {
+                min = someArray[i];
             }
-            if (array[i] > max) {
-                max = array[i];
+            if (someArray[i] > max) {
+                max = someArray[i];
             }
-            sum += array[i];
+            sum += someArray[i];
         }
-        double average = sum / array.length;
+        double average = (double) sum / someArray.length;
         System.out.println();
         System.out.println("Максимум: " + max);
         System.out.println("Минимум: " + max);
