@@ -24,7 +24,7 @@ public class UserArray {
         System.out.println("\nМетод с добавлением ещё одного элемента в конец: ");
         printArray(getExtendedArray(taskArray));
         System.out.println("\nМетод с добавлением ещё одного элемента в начало (значение 0го элемента 99): ");
-        printArray(getExtendedArrayFromStart(taskArray, 88));
+        printArray(getExtendedArrayFromStart(taskArray, 99));
     }
 
     public static int[] getExtendedArray(int[] someArray) {
