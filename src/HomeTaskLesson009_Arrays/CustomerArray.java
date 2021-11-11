@@ -20,10 +20,11 @@ public class CustomerArray {
         fillArray(array);
         System.out.print("Проверочная строка значений массива: ");
         for (int i = 0; i < array.length; i++) {
-            if (i != array.length - 1)
+            if (i != array.length - 1) {
                 System.out.print(array[i] + ", ");
-            else
+            } else {
                 System.out.print(array[i] + ".\n");
+            }
         }
         System.out.printf("Максимальное значение в массиве равно %d.\n", getMax(array));
         System.out.printf("Минимальное значение в массиве равно %d.\n", getMin(array));

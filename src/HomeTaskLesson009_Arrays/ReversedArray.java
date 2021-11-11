@@ -50,8 +50,9 @@ public class ReversedArray {
         }
 
         for (int j = array.length - index; j < count; j++) {
-            if (array.length - index < 0)
+            if (array.length - index < 0) {
                 break;
+            }
             cuttedArray[j] = 1;
         }
         return cuttedArray;
@@ -59,10 +60,11 @@ public class ReversedArray {
 
     public static void printArray(int[] someArray) {
         for (int i = 0; i < someArray.length; i++) {
-            if (i != someArray.length - 1)
+            if (i != someArray.length - 1) {
                 System.out.print(someArray[i] + ", ");
-            else
+            } else {
                 System.out.println(someArray[i] + ".");
+            }
         }
     }
 

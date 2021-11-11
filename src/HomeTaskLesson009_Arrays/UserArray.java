@@ -30,8 +30,9 @@ public class UserArray {
     public static int[] getExtendedArray(int[] someArray) {
         int[] extendedArray = new int[someArray.length + 1];
         for (int i = 0; i < extendedArray.length; i++) {
-            if (i <= someArray.length - 1)
+            if (i <= someArray.length - 1) {
                 extendedArray[i] = someArray[i];
+            }
         }
         return extendedArray;
     }
@@ -40,8 +41,9 @@ public class UserArray {
         int[] extendedArrayFromStart = new int[array.length + 1];
         extendedArrayFromStart[0] = value;
         for (int i = 1; i < extendedArrayFromStart.length; i++) {
-            if (i <= array.length)
+            if (i <= array.length) {
                 extendedArrayFromStart[i] = array[i - 1];
+            }
         }
         return extendedArrayFromStart;
     }
